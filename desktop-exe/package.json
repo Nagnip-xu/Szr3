@@ -1,0 +1,28 @@
+{
+  "name": "szr3-desktop",
+  "version": "1.0.7",
+  "private": true,
+  "author": "Szr3",
+  "description": "Szr3 Windows desktop application",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "check:connection": "node scripts/check-connection.mjs",
+    "prepare:frontend": "node scripts/prepare-frontend.mjs",
+    "build:frontend": "npm run prepare:frontend && npm.cmd install --prefix build/frontend && npm.cmd run build --prefix build/frontend && node scripts/assemble-frontend.mjs",
+    "start": "electron .",
+    "dist": "node scripts/bump-version.mjs && npm run build:frontend && node scripts/build-windows.mjs nsis",
+    "dist:dir": "node scripts/bump-version.mjs && npm run build:frontend && node scripts/build-windows.mjs dir"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "allowScripts": {
+    "electron": true,
+    "electron-winstaller": true
+  },
+  "dependencies": {
+    "https-proxy-agent": "^7.0.6"
+  }
+}

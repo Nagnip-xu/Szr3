@@ -1,0 +1,19 @@
+{
+  "name": "szr3",
+  "private": true,
+  "scripts": {
+    "dev:website": "npm run dev --prefix website",
+    "build:website": "node scripts/build-website.mjs",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\" \"npm run dev:admin\"",
+    "dev:web": "npm run dev --prefix web",
+    "dev:api": "npm run start:dev --prefix api",
+    "dev:admin": "npm run dev:admin --prefix web",
+    "build": "npm run build --prefix api && npm run build --prefix web",
+    "install:all": "npm install --prefix web && npm install --prefix api",
+    "clean": "node scripts/scan-cleanup.mjs .",
+    "clean:apply": "node scripts/scan-cleanup.mjs . --apply"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

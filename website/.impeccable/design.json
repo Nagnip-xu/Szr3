@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T18:30:29Z",
+  "title": "Design System: 星轨数字人",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "日光纸白",
+        "canonical": "#f6f7f2",
+        "tonalRamp": [
+          "oklch(15% 0.0025 115.7)",
+          "oklch(27% 0.0045 115.7)",
+          "oklch(39% 0.0065 115.7)",
+          "oklch(51% 0.0067 115.7)",
+          "oklch(63% 0.0067 115.7)",
+          "oklch(75% 0.0067 115.7)",
+          "oklch(87% 0.0035 115.7)",
+          "oklch(95% 0.0013 115.7)"
+        ]
+      },
+      "mint": {
+        "role": "neutral",
+        "displayName": "薄荷",
+        "canonical": "#e3eee2",
+        "tonalRamp": [
+          "oklch(15% 0.0074 143.0)",
+          "oklch(27% 0.0134 143.0)",
+          "oklch(39% 0.0193 143.0)",
+          "oklch(51% 0.0198 143.0)",
+          "oklch(63% 0.0198 143.0)",
+          "oklch(75% 0.0198 143.0)",
+          "oklch(87% 0.0103 143.0)",
+          "oklch(95% 0.0040 143.0)"
+        ]
+      },
+      "pine": {
+        "role": "primary",
+        "displayName": "松针绿",
+        "canonical": "#173f35",
+        "tonalRamp": [
+          "oklch(15% 0.0182 174.3)",
+          "oklch(27% 0.0328 174.3)",
+          "oklch(39% 0.0474 174.3)",
+          "oklch(51% 0.0486 174.3)",
+          "oklch(63% 0.0486 174.3)",
+          "oklch(75% 0.0486 174.3)",
+          "oklch(87% 0.0253 174.3)",
+          "oklch(95% 0.0097 174.3)"
+        ]
+      },
+      "pine-dark": {
+        "role": "primary",
+        "displayName": "深松针绿",
+        "canonical": "#113329",
+        "tonalRamp": [
+          "oklch(15% 0.0164 171.1)",
+          "oklch(27% 0.0296 171.1)",
+          "oklch(39% 0.0428 171.1)",
+          "oklch(51% 0.0439 171.1)",
+          "oklch(63% 0.0439 171.1)",
+          "oklch(75% 0.0439 171.1)",
+          "oklch(87% 0.0228 171.1)",
+          "oklch(95% 0.0088 171.1)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "墨绿",
+        "canonical": "#1b342e",
+        "tonalRamp": [
+          "oklch(15% 0.0124 176.8)",
+          "oklch(27% 0.0224 176.8)",
+          "oklch(39% 0.0324 176.8)",
+          "oklch(51% 0.0332 176.8)",
+          "oklch(63% 0.0332 176.8)",
+          "oklch(75% 0.0332 176.8)",
+          "oklch(87% 0.0173 176.8)",
+          "oklch(95% 0.0066 176.8)"
+        ]
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "灰绿",
+        "canonical": "#52685c",
+        "tonalRamp": [
+          "oklch(15% 0.0122 161.1)",
+          "oklch(27% 0.0220 161.1)",
+          "oklch(39% 0.0317 161.1)",
+          "oklch(51% 0.0325 161.1)",
+          "oklch(63% 0.0325 161.1)",
+          "oklch(75% 0.0325 161.1)",
+          "oklch(87% 0.0169 161.1)",
+          "oklch(95% 0.0065 161.1)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "雾绿细线",
+        "canonical": "#d6ded3",
+        "tonalRamp": [
+          "oklch(15% 0.0064 137.0)",
+          "oklch(27% 0.0116 137.0)",
+          "oklch(39% 0.0167 137.0)",
+          "oklch(51% 0.0171 137.0)",
+          "oklch(63% 0.0171 137.0)",
+          "oklch(75% 0.0171 137.0)",
+          "oklch(87% 0.0089 137.0)",
+          "oklch(95% 0.0034 137.0)"
+        ]
+      },
+      "coral": {
+        "role": "secondary",
+        "displayName": "珊瑚",
+        "canonical": "#ff795e",
+        "tonalRamp": [
+          "oklch(15% 0.0634 32.9)",
+          "oklch(27% 0.1142 32.9)",
+          "oklch(39% 0.1649 32.9)",
+          "oklch(51% 0.1691 32.9)",
+          "oklch(63% 0.1691 32.9)",
+          "oklch(75% 0.1691 32.9)",
+          "oklch(87% 0.0879 32.9)",
+          "oklch(95% 0.0338 32.9)"
+        ]
+      },
+      "coral-hover": {
+        "role": "secondary",
+        "displayName": "浅珊瑚",
+        "canonical": "#ff8c74",
+        "tonalRamp": [
+          "oklch(15% 0.0541 32.9)",
+          "oklch(27% 0.0975 32.9)",
+          "oklch(39% 0.1408 32.9)",
+          "oklch(51% 0.1444 32.9)",
+          "oklch(63% 0.1444 32.9)",
+          "oklch(75% 0.1444 32.9)",
+          "oklch(87% 0.0751 32.9)",
+          "oklch(95% 0.0289 32.9)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "纯白",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.0)",
+          "oklch(27% 0.0000 0.0)",
+          "oklch(39% 0.0000 0.0)",
+          "oklch(51% 0.0000 0.0)",
+          "oklch(63% 0.0000 0.0)",
+          "oklch(75% 0.0000 0.0)",
+          "oklch(87% 0.0000 0.0)",
+          "oklch(95% 0.0000 0.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "中文展示标题",
+        "purpose": "主要展示标题；窄屏按源码媒体查询调整。"
+      },
+      "headline": {
+        "displayName": "区域标题",
+        "purpose": "清楚界定内容区域。"
+      },
+      "title": {
+        "displayName": "条目标题",
+        "purpose": "能力说明的紧凑标题。"
+      },
+      "body": {
+        "displayName": "正文",
+        "purpose": "显著的解释文字，保持宽松行距。"
+      },
+      "body-small": {
+        "displayName": "辅助正文",
+        "purpose": "说明、问答和状态解释。"
+      },
+      "label": {
+        "displayName": "标签",
+        "purpose": "导航、控制与状态短文本。"
+      },
+      "button": {
+        "displayName": "操作文字",
+        "purpose": "标准按钮。"
+      },
+      "wordmark": {
+        "displayName": "拉丁字标",
+        "purpose": "拉丁品牌展示；不替代中文正文。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "film-stack",
+        "value": "0 22px 38px -18px rgb(0 0 0 / 22%)",
+        "purpose": "叠放影像画框。"
+      },
+      {
+        "name": "floating-caption",
+        "value": "0 12px 25px -10px rgb(0 0 0 / 16%)",
+        "purpose": "浮动字幕材料。"
+      },
+      {
+        "name": "toast",
+        "value": "0 9px 25px -9px rgb(0 0 0 / 18%)",
+        "purpose": "临时状态提示。"
+      },
+      {
+        "name": "film-entry",
+        "value": "0 8px 15px -10px rgb(0 0 0 / 12%)",
+        "purpose": "影像入场的起始状态。"
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "画框、选择线与图标的快速收敛。"
+      },
+      {
+        "name": "color-feedback",
+        "value": "180ms",
+        "purpose": "链接和按钮颜色状态。"
+      },
+      {
+        "name": "icon-feedback",
+        "value": "250ms",
+        "purpose": "按钮箭头位移与问答加号旋转。"
+      },
+      {
+        "name": "selection-line",
+        "value": "350ms",
+        "purpose": "流程选中底线。"
+      },
+      {
+        "name": "content-transition",
+        "value": "340ms",
+        "purpose": "流程面板以轻微位移和透明度切换。"
+      },
+      {
+        "name": "avatar-handoff",
+        "value": "340ms / 100ms reduced or paused; cubic-bezier(.16,1,.3,1)",
+        "purpose": "新海报解码后切换底层来源，保留完整的上一帧在字幕与控制之下，以 opacity 1→0 淡出，保持画框连续。"
+      },
+      {
+        "name": "paused-content-transition",
+        "value": "100ms",
+        "purpose": "页面暂停动态时仅保留轻微透明度反馈。"
+      },
+      {
+        "name": "frame-response",
+        "value": "650ms",
+        "purpose": "画框变换与柔和投影的连续响应。"
+      },
+      {
+        "name": "frame-entry",
+        "value": "700–750ms",
+        "purpose": "影像与字幕一次性装配入场。"
+      },
+      {
+        "name": "wave",
+        "value": "1.2s ease-in-out infinite alternate",
+        "purpose": "仅可见且允许动态时的示意波形。"
+      },
+      {
+        "name": "pointer-drift",
+        "value": "±7px x / ±4.5px y",
+        "purpose": "仅细指针影像视差；requestAnimationFrame 合并事件。"
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition-duration: 0.01ms; scroll-behavior: auto",
+        "purpose": "系统减少动态效果偏好下保持稳定海报与布局；视频由显式操作播放。"
+      },
+      {
+        "name": "playback-budget",
+        "value": "one visible muted reference video",
+        "purpose": "离开视口、页面隐藏或另一预览播放时暂停；页面开关允许暂停自动动效。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-phone-max",
+        "value": "419px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "719px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "959px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1199px"
+      },
+      {
+        "name": "wide-desktop-min",
+        "value": "1500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Coral Action",
+      "kind": "button",
+      "refersTo": "button-coral",
+      "description": "明确的矩形操作；保留颜色反馈、箭头运动和可见键盘焦点。",
+      "html": "<button class=\"ds-button-coral\" type=\"button\">开启我的创作<svg class=\"ds-button-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button>",
+      "css": ".ds-button-coral{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:54px;padding:14px 24px;border:0;border-radius:8px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;cursor:pointer;transition:color .18s,background-color .18s,border-color .18s;background:var(--coral,#ff795e);color:var(--pine-dark,#113329);}.ds-button-coral:hover{background:var(--coral-hover,#ff8c74);}.ds-button-coral:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;}.ds-button-icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));}.ds-button-coral:hover .ds-button-icon{transform:translate(2px,-2px);}@media(prefers-reduced-motion:reduce){.ds-button-coral{transition:none;}.ds-button-coral .ds-button-icon{transition:none;}}"
+    },
+    {
+      "name": "Pine Action",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "明确的矩形操作；保留颜色反馈、箭头运动和可见键盘焦点。",
+      "html": "<button class=\"ds-button-dark\" type=\"button\">申请体验<svg class=\"ds-button-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button>",
+      "css": ".ds-button-dark{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:54px;padding:14px 24px;border:0;border-radius:8px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;cursor:pointer;transition:color .18s,background-color .18s,border-color .18s;background:var(--pine,#173f35);color:var(--paper,#f6f7f2);}.ds-button-dark:hover{background:#2a5c48;}.ds-button-dark:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;}.ds-button-icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));}.ds-button-dark:hover .ds-button-icon{transform:translate(2px,-2px);}@media(prefers-reduced-motion:reduce){.ds-button-dark{transition:none;}.ds-button-dark .ds-button-icon{transition:none;}}"
+    },
+    {
+      "name": "Paper Action",
+      "kind": "button",
+      "refersTo": "button-paper",
+      "description": "明确的矩形操作；保留颜色反馈、箭头运动和可见键盘焦点。",
+      "html": "<button class=\"ds-button-paper\" type=\"button\">用邮箱发送<svg class=\"ds-button-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button>",
+      "css": ".ds-button-paper{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:54px;padding:14px 24px;border:0;border-radius:8px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;cursor:pointer;transition:color .18s,background-color .18s,border-color .18s;background:var(--paper,#f6f7f2);color:var(--pine,#173f35);}.ds-button-paper:hover{background:var(--mint,#e3eee2);}.ds-button-paper:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;}.ds-button-icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));}.ds-button-paper:hover .ds-button-icon{transform:translate(2px,-2px);}@media(prefers-reduced-motion:reduce){.ds-button-paper{transition:none;}.ds-button-paper .ds-button-icon{transition:none;}}"
+    },
+    {
+      "name": "Application Email Field",
+      "kind": "input",
+      "refersTo": "application-field",
+      "description": "始终可见的标签与真实邮箱字段，聚焦时转换边框并保留焦点环。",
+      "html": "<div class=\"ds-field-group\"><label class=\"ds-field-label\" for=\"ds-email\">联系邮箱 <span class=\"ds-field-hint\">必填</span></label><input class=\"ds-field\" id=\"ds-email\" type=\"email\" placeholder=\"you@example.com\" autocomplete=\"email\" required></div>",
+      "css": ".ds-field-group{width:100%;max-width:420px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;color:var(--ink,#1b342e);}.ds-field-label{display:flex;justify-content:space-between;gap:15px;font-size:12px;margin-bottom:10px;}.ds-field-hint{color:var(--body,#52685c);}.ds-field{display:block;width:100%;height:52px;border:1px solid #acbea5;border-radius:7px;background:#f6f7f28c;padding:12px 16px;color:var(--pine,#173f35);font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;font-size:13px;caret-color:var(--pine,#173f35);}.ds-field::placeholder{color:var(--body,#52685c);opacity:1;}.ds-field:focus{border-color:var(--pine,#173f35);}.ds-field:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;outline-offset:3px;}"
+    },
+    {
+      "name": "Quiet Navigation",
+      "kind": "nav",
+      "description": "灰绿导航文字，悬停下划线与清楚的键盘焦点。",
+      "html": "<nav class=\"ds-nav\" aria-label=\"主要导航\"><a class=\"ds-nav-link\" href=\"#workflow\">创作方式</a><a class=\"ds-nav-link\" href=\"#playground\">互动体验</a><a class=\"ds-nav-link\" href=\"#possibilities\">产品能力</a><a class=\"ds-nav-link\" href=\"#faq\">常见问题</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:32px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;font-size:13px;color:var(--body,#52685c);}.ds-nav-link{padding-block:10px;color:inherit;text-decoration:none;text-underline-offset:5px;transition:color .18s;}.ds-nav-link:hover{color:var(--pine,#173f35);text-decoration:underline;}.ds-nav-link:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-nav-link{transition:none;}}"
+    },
+    {
+      "name": "Format Tag",
+      "kind": "chip",
+      "refersTo": "format-tag",
+      "description": "安静的内容分类标签；这是信息文本而非按钮。",
+      "html": "<div class=\"ds-tags\"><span class=\"ds-tag\">知识分享</span><span class=\"ds-tag\">产品介绍</span><span class=\"ds-tag\">企业内容</span></div>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:8px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;}.ds-tag{font-size:12px;padding:6px 12px;background:#e8ede0;border-radius:5px;color:var(--body,#52685c);}"
+    },
+    {
+      "name": "Script Paper",
+      "kind": "card",
+      "description": "工作流程里的文稿材料；浅绿纸面、轻微旋转与细线，不使用浮起的通用卡片外壳。",
+      "html": "<article class=\"ds-script\"><span class=\"ds-script-label\">我的下一条口播</span><p class=\"ds-script-copy\">今天，聊点<br><span class=\"ds-script-highlight\">你真正热爱的。</span></p><div class=\"ds-script-line\"></div><span class=\"ds-script-foot\">保留想法，把表达慢慢打磨。</span><svg class=\"ds-script-mark\" viewBox=\"0 0 60 60\" aria-hidden=\"true\"><path d=\"m10 30 12 12L49 15\"/></svg></article>",
+      "css": ".ds-script{position:relative;background:#dce7ce;color:var(--pine,#173f35);padding:28px 34px 22px;transform:rotate(-2deg);max-width:440px;border-radius:5px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;}.ds-script-label,.ds-script-foot{font-size:12px;color:#526a4c;}.ds-script-copy{font-size:31px;line-height:1.6;font-weight:500;margin:20px 0 0;}.ds-script-highlight{background:#f7f7b9;}.ds-script-line{height:1px;background:#b4c7a5;margin-top:25px;}.ds-script-foot{display:block;margin-top:15px;}.ds-script-mark{position:absolute;right:30px;top:52px;width:47px;fill:none;stroke:#56865b;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;transform:rotate(-8deg);}"
+    },
+    {
+      "name": "Subtitle Selection",
+      "kind": "chip",
+      "refersTo": "subtitle-option",
+      "description": "选中由边框、底色、文字和 aria-pressed 共同表达；字幕样本保留在控件内。",
+      "html": "<div class=\"ds-subtitle-options\" role=\"group\" aria-label=\"字幕样式\"><button class=\"ds-subtitle\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-style-sample\">好好表达</span>简约白</button><button class=\"ds-subtitle\" type=\"button\" aria-pressed=\"false\"><span class=\"ds-style-sample ds-style-highlight\">好好表达</span>醒目黄</button><button class=\"ds-subtitle\" type=\"button\" aria-pressed=\"false\"><span class=\"ds-style-sample ds-style-cinema\">好好表达</span>电影感</button></div>",
+      "css": ".ds-subtitle-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:440px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;}.ds-subtitle{padding:9px 9px 10px;border-radius:8px;border:1px solid #d9dfd3;font-family:inherit;font-size:12px;color:var(--body,#52685c);text-align:center;background:var(--white,#fff);cursor:pointer;transition:color .18s,background-color .18s,border-color .18s;}.ds-subtitle:hover{border-color:#8f9f89;}.ds-subtitle[aria-pressed=\"true\"]{border-color:var(--pine,#173f35);color:var(--pine,#173f35);background:#eef2e8;}.ds-subtitle:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;}.ds-style-sample{display:block;background:#2e3c35;color:#fff;font-size:12px;padding:12px 2px;margin-bottom:7px;border-radius:4px;white-space:nowrap;}.ds-style-highlight{color:#f9df65;font-weight:650;}.ds-style-cinema{font-family:serif;letter-spacing:.12em;font-weight:400;}@media(prefers-reduced-motion:reduce){.ds-subtitle{transition:none;}}"
+    },
+    {
+      "name": "Workflow Tab",
+      "kind": "custom",
+      "description": "深色区域上的有序流程控制；珊瑚底线与编号同步表达活动状态。",
+      "html": "<div class=\"ds-workflow\"><div class=\"ds-tabs\" role=\"tablist\" aria-label=\"创作流程\"><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"true\"><span class=\"ds-tab-number\">01</span>文案</button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\"><span class=\"ds-tab-number\">02</span>配音</button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\"><span class=\"ds-tab-number\">03</span>数字人</button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\"><span class=\"ds-tab-number\">04</span>后期</button></div></div>",
+      "css": ".ds-workflow{background:var(--pine,#173f35);color:var(--paper,#f6f7f2);padding:12px 24px;font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;}.ds-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #ffffff26;border-bottom:1px solid #ffffff26;}.ds-tab{position:relative;display:flex;align-items:center;gap:15px;color:#afc7b4;min-height:82px;padding:20px 20px 20px 0;text-align:left;font-family:inherit;font-size:15px;border:0;background:none;cursor:pointer;transition:color .18s;}.ds-tab-number{font-family:\"Bricolage Grotesque\",sans-serif;font-size:12px;color:#afc7b4;}.ds-tab:after{content:\"\";position:absolute;bottom:-1px;left:0;right:25px;height:3px;background:var(--coral,#ff795e);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease,cubic-bezier(.16,1,.3,1));}.ds-tab[aria-selected=\"true\"],.ds-tab:hover{color:var(--white,#fff);}.ds-tab[aria-selected=\"true\"]:after{transform:scaleX(1);}.ds-tab[aria-selected=\"true\"] .ds-tab-number{color:var(--coral,#ff795e);}.ds-tab:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;}@media(max-width:719px){.ds-tab{flex-wrap:wrap;gap:8px;font-size:12px;}.ds-tab-number{width:100%;}}@media(prefers-reduced-motion:reduce){.ds-tab,.ds-tab:after{transition:none;}}"
+    },
+    {
+      "name": "FAQ Disclosure",
+      "kind": "custom",
+      "description": "原生可展开问答，细线边界与加号旋转提供状态反馈。",
+      "html": "<details class=\"ds-faq\"><summary class=\"ds-faq-summary\">完全不会剪辑，也能开始吗？<svg class=\"ds-faq-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><div class=\"ds-faq-answer\">可以从文案、配音、数字人、后期逐步开始。工作台将这些环节放在同一条流程中，你可以在成片前预览和调整内容。最终效果仍会受文案、参考素材与所选参数影响。</div></details>",
+      "css": ".ds-faq{max-width:620px;border-top:1px solid var(--line,#d6ded3);border-bottom:1px solid var(--line,#d6ded3);font-family:\"Xinggui Sans\", \"Noto Sans SC\", \"Microsoft YaHei\", sans-serif;color:var(--ink,#1b342e);}.ds-faq-summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;cursor:pointer;font-size:14px;font-weight:500;}.ds-faq-summary::-webkit-details-marker{display:none;}.ds-faq-summary:focus-visible{outline:3px solid var(--coral,#ff795e);outline-offset:5px;}.ds-faq-icon{height:18px;width:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1));}.ds-faq[open] .ds-faq-icon{transform:rotate(45deg);}.ds-faq-answer{padding:0 33px 24px 0;font-size:12px;color:var(--body,#52685c);line-height:2;}@media(prefers-reduced-motion:reduce){.ds-faq-icon{transition:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "日光放映室",
+    "overview": "“日光放映室”以明亮、沉静的底色托住真实人物影像。薄荷绿与纸白像自然光下的工作材料，松针绿提供清楚的阅读重心，珊瑚色让操作、选中状态和键盘焦点容易找到。整体气质亲近、克制，留白充足，信息在需要操作的区域适度变密。\n\n中文内容是主要阅读层，较大的标题与宽松行距让创作说明保持清楚；拉丁字标和数字使用更有轮廓感的 Bricolage Grotesque。边框、裁切、圆角和少量柔和阴影组织材料，不把每条信息都装进浮起的卡片。运动服务于片段、字幕和状态的连续变化，人物始终留在稳定的画框中。",
+    "keyCharacteristics": [
+      "薄荷与纸白的日光底色，松针绿的阅读层。",
+      "清楚的中文层级与有轮廓感的拉丁字标。",
+      "细线分隔、矩形画框、适度柔和的圆角。",
+      "珊瑚色的操作反馈与可见焦点。",
+      "稳定预览、可逆选择、可暂停的自动动态。"
+    ],
+    "rules": [
+      {
+        "name": "The Coral Signal Rule",
+        "body": "珊瑚色承担操作、选中指示与焦点提示；长段阅读使用墨绿或灰绿。",
+        "section": "colors"
+      },
+      {
+        "name": "The Chinese Reading Rule",
+        "body": "中文正文使用 Xinggui Sans 字体栈与宽松行距；Bricolage Grotesque 用于拉丁字标、数字和比例标记。",
+        "section": "typography"
+      },
+      {
+        "name": "The Media Depth Rule",
+        "body": "柔和投影主要属于叠放的影像、浮动字幕和临时提示；正文、能力列表和问答依靠底色与细线建立层次。",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do 使用松针绿与灰绿区分标题、正文和辅助信息。",
+      "Do 保持正文的宽松行距，并在窄屏重排内容与控制区。",
+      "Do 给键盘可操作元素保留珊瑚色可见焦点。",
+      "Do 在同一个画框内切换人物与字幕，并保留明确的选中状态。",
+      "Do 支持减少动态效果、暂停自动动效和显式播放。",
+      "Do 明确标注参考素材、示意状态与邮件草稿的实际结果。"
+    ],
+    "donts": [
+      "Don't 把字幕专用的黄色、黑色遮罩或衬线样本提升为通用阅读样式。",
+      "Don't 给普通内容列表套用影像叠放的投影和旋转。",
+      "Don't 以拉丁展示字体替代中文正文的阅读字体。",
+      "Don't 只用颜色表达人物、字幕或流程选中状态。",
+      "Don't 把界面预览描述为在线生成结果，或把邮件草稿描述为已发送申请。"
+    ]
+  }
+}

@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e7f0e7" />
+    <title>星轨数字人 — 让灵感，即刻出镜</title>
+    <meta
+      name="description"
+      content="把文案、配音、数字人和字幕后期连成一条创作流。了解星轨数字人，探索交互演示，申请你的口播视频创作体验。"
+    />
+    <meta property="og:title" content="星轨数字人 — 让灵感，即刻出镜" />
+    <meta property="og:description" content="从一句文案，到你的下一条视频。" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="./assets/mark.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="./assets/fonts/bricolage-grotesque-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+          <path d="M4 12h15m-6-6 6 6-6 6" />
+        </symbol>
+        <symbol id="i-arrow-up" viewBox="0 0 24 24">
+          <path d="M6 18 18 6M6 6h12v12" />
+        </symbol>
+        <symbol id="i-play" viewBox="0 0 24 24">
+          <path d="m9 5 10 7-10 7Z" />
+        </symbol>
+        <symbol id="i-pause" viewBox="0 0 24 24">
+          <path d="M8 5v14M16 5v14" />
+        </symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24">
+          <path d="M12 5v14M5 12h14" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+          <path d="m5 12 4 4L19 6" />
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+          <path d="M4 8h16M4 16h16" />
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </symbol>
+        <symbol id="i-text" viewBox="0 0 24 24">
+          <path d="M4 5h16M12 5v14M8 19h8" />
+        </symbol>
+        <symbol id="i-audio" viewBox="0 0 24 24">
+          <path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4" />
+        </symbol>
+        <symbol id="i-person" viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M5 21v-2a7 7 0 0 1 14 0v2" />
+        </symbol>
+        <symbol id="i-frame" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="M3 15h18M8 19v-4M16 19v-4" />
+        </symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24">
+          <rect x="8" y="8" width="12" height="12" rx="2" />
+          <path d="M15 8V4H4v11h4" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="m3 7 9 6 9-6" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="header" id="top">
+      <div class="header-inner page-width">
+        <a class="brand" href="#top" aria-label="星轨数字人首页"
+          ><img src="./assets/mark.svg" alt="" width="38" height="38" /><span
+            >星轨<span class="brand-light">数字人</span></span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="主要导航">
+          <a href="#workflow">创作方式</a><a href="#playground">互动体验</a
+          ><a href="#possibilities">产品能力</a><a href="#faq">常见问题</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="motion-toggle"
+            id="motion-toggle"
+            type="button"
+            aria-label="暂停页面自动动效"
+            aria-pressed="false"
+          >
+            <svg class="icon"><use href="#i-pause" /></svg
+            ><span>暂停动效</span></button
+          ><a
+            class="button button-small button-dark"
+            href="https://github.com/Nagnip-xu/Szr3"
+            >GitHub<svg class="icon"><use href="#i-arrow-up" /></svg></a
+          ><button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="打开导航"
+          >
+            <svg class="icon"><use href="#i-menu" /></svg>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="移动端导航" hidden>
+        <a href="#workflow">创作方式</a><a href="#playground">互动体验</a
+        ><a href="#possibilities">产品能力</a><a href="#faq">常见问题</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner page-width">
+          <h1 id="hero-title">
+            让灵感，<span class="headline-end"
+              >即刻<span class="word-frame"
+                >出镜<svg viewBox="0 0 210 18" aria-hidden="true">
+                  <path d="M4 12c51-9 124-10 201-4" /></svg></span
+              >。</span
+            >
+          </h1>
+          <div class="hero-copy">
+            <p>从一句文案，<br />到你的下一条视频。</p>
+            <p class="hero-description">
+              文案、配音、数字人和字幕后期，<br />在一条创作流里，自然相遇。
+            </p>
+            <a
+              class="button button-coral"
+              id="hero-cta"
+              href="https://github.com/Nagnip-xu/Szr3"
+              >在 GitHub 了解项目<svg class="icon">
+                <use href="#i-arrow-up" /></svg></a
+            ><a class="text-link" href="#playground"
+              ><span class="tiny-play"
+                ><svg class="icon"><use href="#i-play" /></svg></span
+              >先玩一下，感受创作</a
+            >
+          </div>
+          <div
+            class="film-assembly"
+            id="film-assembly"
+            aria-label="产品现有预设人物参考片段"
+          >
+            <figure class="film-frame film-back film-left">
+              <img
+                src="./assets/avatar-001.webp"
+                alt="户外场景中的男性预设人物"
+                width="540"
+                height="960"
+                fetchpriority="high"
+              />
+              <figcaption>自然表达</figcaption>
+            </figure>
+            <figure class="film-frame film-back film-right">
+              <img
+                src="./assets/avatar-002.webp"
+                alt="室内场景中的男性预设人物"
+                width="540"
+                height="960"
+              />
+              <figcaption>从容讲述</figcaption>
+            </figure>
+            <figure class="film-frame film-main">
+              <img
+                src="./assets/avatar-003.webp"
+                alt="户外场景中的女性预设人物"
+                width="540"
+                height="960"
+                fetchpriority="high"
+              /><video
+                id="hero-video"
+                src="./assets/avatar-003.mp4"
+                poster="./assets/avatar-003.webp"
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="女性预设人物静音参考片段"
+              ></video>
+              <div
+                class="frame-corner frame-corner-top"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="frame-corner frame-corner-bottom"
+                aria-hidden="true"
+              ></div>
+              <span class="frame-live"><span></span>让表达发生</span>
+              <figcaption>“把热爱，说给世界听。”</figcaption>
+              <button
+                class="hero-play"
+                type="button"
+                id="hero-play"
+                aria-label="暂停参考片段"
+              >
+                <svg class="icon"><use href="#i-pause" /></svg>
+              </button>
+            </figure>
+            <div class="floating-caption" aria-hidden="true">
+              <svg class="icon"><use href="#i-text" /></svg
+              ><span>有想法，就有开场。</span
+              ><span class="caption-caret"></span>
+            </div>
+          </div>
+          <div class="hero-side-note">
+            <span class="orbit-symbol" aria-hidden="true"
+              ><i></i><i></i><b></b
+            ></span>
+            <p>你的内容。<br />你的声音。<br />你的节奏。</p>
+            <span>预设人物 · 静音参考片段</span>
+          </div>
+          <div class="hero-bottom">
+            <span class="hero-bottom-note"
+              ><span class="status-dot"></span>为每一个想认真表达的人而做</span
+            ><a href="#workflow"
+              >向下，看看灵感如何成片<svg class="icon">
+                <use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="creation-strip" aria-label="创作流程">
+        <div class="page-width strip-inner">
+          <a href="#workflow" data-jump-step="0"
+            ><span>01</span>一句文案<svg class="icon">
+              <use href="#i-arrow" /></svg></a
+          ><a href="#workflow" data-jump-step="1"
+            ><span>02</span>一种声音<svg class="icon">
+              <use href="#i-arrow" /></svg></a
+          ><a href="#workflow" data-jump-step="2"
+            ><span>03</span>一个数字人<svg class="icon">
+              <use href="#i-arrow" /></svg></a
+          ><a href="#workflow" data-jump-step="3"
+            ><span>04</span>你的下一条作品<svg class="icon">
+              <use href="#i-arrow-up" /></svg
+          ></a>
+        </div>
+      </div>
+
+      <section
+        class="playground section-space page-width"
+        id="playground"
+        aria-labelledby="playground-title"
+      >
+        <div class="section-heading">
+          <h2 id="playground-title">一句话，<br />找到它的出镜方式。</h2>
+          <div class="section-intro">
+            <p>改一句文案，选一位人物，<br />再给画面一点你的风格。</p>
+            <span class="demo-label"
+              ><span class="status-dot"></span>可互动的字幕与人物演示</span
+            >
+          </div>
+        </div>
+        <div class="studio">
+          <div class="studio-controls">
+            <div class="control-heading">
+              <label for="caption-input">先写下，你想说的话</label
+              ><span id="caption-count">20 / 48</span>
+            </div>
+            <textarea
+              id="caption-input"
+              rows="3"
+              maxlength="48"
+              placeholder="写下你的第一句开场白…"
+            >
+今天，聊点你真正热爱的。让每一个好想法，都被看见。</textarea
+            >
+            <div class="control-group">
+              <span class="control-label" id="avatar-label">让谁来讲？</span>
+              <div
+                class="avatar-options"
+                role="group"
+                aria-labelledby="avatar-label"
+              >
+                <button
+                  class="avatar-option"
+                  type="button"
+                  data-avatar="001"
+                  aria-pressed="false"
+                >
+                  <img
+                    src="./assets/avatar-001.webp"
+                    alt=""
+                    width="48"
+                    height="64"
+                    loading="lazy"
+                  /><span>自然户外<small>预设人物 A</small></span
+                  ><svg class="icon selection-check">
+                    <use href="#i-check" />
+                  </svg></button
+                ><button
+                  class="avatar-option"
+                  type="button"
+                  data-avatar="002"
+                  aria-pressed="false"
+                >
+                  <img
+                    src="./assets/avatar-002.webp"
+                    alt=""
+                    width="48"
+                    height="64"
+                    loading="lazy"
+                  /><span>从容室内<small>预设人物 B</small></span
+                  ><svg class="icon selection-check">
+                    <use href="#i-check" />
+                  </svg></button
+                ><button
+                  class="avatar-option is-selected"
+                  type="button"
+                  data-avatar="003"
+                  aria-pressed="true"
+                >
+                  <img
+                    src="./assets/avatar-003.webp"
+                    alt=""
+                    width="48"
+                    height="64"
+                    loading="lazy"
+                  /><span>明亮日常<small>预设人物 C</small></span
+                  ><svg class="icon selection-check">
+                    <use href="#i-check" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="control-group">
+              <span class="control-label" id="style-label">给字幕一点风格</span>
+              <div
+                class="subtitle-options"
+                role="group"
+                aria-labelledby="style-label"
+              >
+                <button
+                  class="subtitle-option is-selected"
+                  type="button"
+                  data-subtitle="clean"
+                  aria-pressed="true"
+                >
+                  <span class="style-sample style-clean">好好表达</span
+                  >简约白</button
+                ><button
+                  class="subtitle-option"
+                  type="button"
+                  data-subtitle="highlight"
+                  aria-pressed="false"
+                >
+                  <span class="style-sample style-highlight">好好表达</span
+                  >醒目黄</button
+                ><button
+                  class="subtitle-option"
+                  type="button"
+                  data-subtitle="cinema"
+                  aria-pressed="false"
+                >
+                  <span class="style-sample style-cinema">好好表达</span>电影感
+                </button>
+              </div>
+            </div>
+            <p class="demo-note">
+              画面使用现有预设参考片段，字幕可实时编辑。<br />正式的配音与数字人生成，在星轨工作台里完成。
+            </p>
+          </div>
+          <div class="studio-screen">
+            <div class="screen-topline">
+              <span>你的表达，正在画面里。</span
+              ><span class="aspect-label">9 : 16</span>
+            </div>
+            <div
+              class="preview-monitor"
+              data-style="clean"
+              id="preview-monitor"
+            >
+              <img
+                id="preview-poster"
+                src="./assets/avatar-003.webp"
+                alt="所选预设人物的画面预览"
+                width="540"
+                height="960"
+                loading="lazy"
+              /><video
+                id="preview-video"
+                src="./assets/avatar-003.mp4"
+                poster="./assets/avatar-003.webp"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-label="所选人物的静音参考片段"
+              ></video>
+              <div class="preview-caption" id="preview-caption">
+                今天，聊点你真正热爱的。
+              </div>
+              <button
+                class="preview-play"
+                type="button"
+                id="preview-play"
+                aria-label="播放参考片段"
+              >
+                <svg class="icon"><use href="#i-play" /></svg>
+              </button>
+              <div class="preview-error" id="preview-error" hidden>
+                <p>片段暂时无法播放，字幕预览仍可使用。</p>
+                <button type="button" id="retry-video">重新加载</button>
+              </div>
+            </div>
+            <div class="playback-controls">
+              <button
+                type="button"
+                id="timeline-play"
+                aria-label="播放参考片段"
+              >
+                <svg class="icon"><use href="#i-play" /></svg></button
+              ><span id="playback-time">00:00</span
+              ><input
+                id="playback-progress"
+                type="range"
+                min="0"
+                max="9"
+                step="0.01"
+                value="0"
+                aria-label="参考片段播放进度"
+              /><span id="playback-duration">00:09</span>
+            </div>
+            <p class="screen-bottomline">
+              试试换个人物，看看同一句话的不同感觉。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="workflow section-space"
+        id="workflow"
+        aria-labelledby="workflow-title"
+      >
+        <div class="page-width">
+          <div class="section-heading">
+            <h2 id="workflow-title">创作的每一步，<br />自然接上下一步。</h2>
+            <p class="workflow-intro">
+              从灵感出发，把零散的环节接起来。<br />按你的节奏，走到一条完整的作品。
+            </p>
+          </div>
+          <div class="workflow-tabs" role="tablist" aria-label="探索创作流程">
+            <button
+              class="workflow-tab is-active"
+              type="button"
+              id="step-tab-0"
+              role="tab"
+              aria-selected="true"
+              aria-controls="step-panel-0"
+              tabindex="0"
+              data-step="0"
+            >
+              <span>01</span
+              ><svg class="icon"><use href="#i-text" /></svg>文案<svg
+                class="icon tab-arrow"
+              >
+                <use href="#i-arrow" />
+              </svg></button
+            ><button
+              class="workflow-tab"
+              type="button"
+              id="step-tab-1"
+              role="tab"
+              aria-selected="false"
+              aria-controls="step-panel-1"
+              tabindex="-1"
+              data-step="1"
+            >
+              <span>02</span
+              ><svg class="icon"><use href="#i-audio" /></svg>声音<svg
+                class="icon tab-arrow"
+              >
+                <use href="#i-arrow" />
+              </svg></button
+            ><button
+              class="workflow-tab"
+              type="button"
+              id="step-tab-2"
+              role="tab"
+              aria-selected="false"
+              aria-controls="step-panel-2"
+              tabindex="-1"
+              data-step="2"
+            >
+              <span>03</span
+              ><svg class="icon"><use href="#i-person" /></svg>数字人<svg
+                class="icon tab-arrow"
+              >
+                <use href="#i-arrow" />
+              </svg></button
+            ><button
+              class="workflow-tab"
+              type="button"
+              id="step-tab-3"
+              role="tab"
+              aria-selected="false"
+              aria-controls="step-panel-3"
+              tabindex="-1"
+              data-step="3"
+            >
+              <span>04</span
+              ><svg class="icon"><use href="#i-frame" /></svg>成片<svg
+                class="icon tab-arrow"
+              >
+                <use href="#i-arrow-up" />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="workflow-panel"
+            id="step-panel-0"
+            role="tabpanel"
+            aria-labelledby="step-tab-0"
+            tabindex="0"
+          >
+            <div class="step-copy">
+              <h3>好内容，<br />从想说的话开始。</h3>
+              <p>
+                从授权视频链接中提取口播文案，或直接写下你的想法。改写、整理、生成标题，让表达逐渐清晰。
+              </p>
+              <a class="light-link" href="#playground"
+                >试着写下第一句<svg class="icon"><use href="#i-arrow" /></svg
+              ></a>
+            </div>
+            <div class="script-visual">
+              <span class="paper-label">我的下一条口播</span>
+              <p>今天，聊点<br /><span>你真正热爱的。</span></p>
+              <div class="paper-line"></div>
+              <span class="paper-foot">保留想法，把表达慢慢打磨。</span
+              ><svg class="script-mark" viewBox="0 0 60 60" aria-hidden="true">
+                <path d="m10 30 12 12L49 15" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="workflow-panel"
+            id="step-panel-1"
+            role="tabpanel"
+            aria-labelledby="step-tab-1"
+            tabindex="0"
+            hidden
+          >
+            <div class="step-copy">
+              <h3>让文字，<br />有自己的声音。</h3>
+              <p>
+                选择预设音色完成配音，也可以使用有授权的参考音频建立专属音色。调整语速，让讲述贴近内容的情绪。
+              </p>
+              <a class="light-link" href="https://github.com/Nagnip-xu/Szr3"
+                >了解配音能力<svg class="icon"><use href="#i-arrow" /></svg
+              ></a>
+            </div>
+            <div class="voice-visual">
+              <div class="voice-wave" aria-hidden="true"></div>
+              <p>声音，给文字一点温度。</p>
+              <span>配音与授权音色克隆 · 波形为示意</span>
+            </div>
+          </div>
+          <div
+            class="workflow-panel"
+            id="step-panel-2"
+            role="tabpanel"
+            aria-labelledby="step-tab-2"
+            tabindex="0"
+            hidden
+          >
+            <div class="step-copy">
+              <h3>给表达，<br />一个熟悉的面孔。</h3>
+              <p>
+                从预设形象开始，或上传有授权的参考视频，保存你的专属数字人。让口播内容有一个持续出镜的主角。
+              </p>
+              <a class="light-link" href="#playground"
+                >看看预设人物<svg class="icon"><use href="#i-arrow" /></svg
+              ></a>
+            </div>
+            <div class="cast-visual">
+              <img
+                src="./assets/avatar-001.webp"
+                alt="自然户外预设人物"
+                width="540"
+                height="960"
+                loading="lazy"
+              /><img
+                src="./assets/avatar-003.webp"
+                alt="明亮日常预设人物"
+                width="540"
+                height="960"
+                loading="lazy"
+              /><img
+                src="./assets/avatar-002.webp"
+                alt="从容室内预设人物"
+                width="540"
+                height="960"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div
+            class="workflow-panel"
+            id="step-panel-3"
+            role="tabpanel"
+            aria-labelledby="step-tab-3"
+            tabindex="0"
+            hidden
+          >
+            <div class="step-copy">
+              <h3>最后一点风格，<br />交给你的审美。</h3>
+              <p>
+                调整字幕，加入 BGM 与画中画，在预览中打磨细节。完成后导出
+                MP4，让作品准备好迎接下一次发布。
+              </p>
+              <a class="light-link" href="https://github.com/Nagnip-xu/Szr3"
+                >查看运行指南<svg class="icon"><use href="#i-arrow" /></svg
+              ></a>
+            </div>
+            <div class="edit-visual">
+              <div class="edit-preview">
+                <img
+                  src="./assets/avatar-003.webp"
+                  alt="成片排版示意"
+                  width="540"
+                  height="960"
+                  loading="lazy"
+                /><span>把热爱，说给世界听。</span>
+              </div>
+              <div
+                class="edit-tracks"
+                aria-label="字幕、声音和画面的时间轴示意"
+              >
+                <span class="track-caption">字幕：把热爱，说给世界听。</span
+                ><span class="track-audio"
+                  ><svg class="icon"><use href="#i-audio" /></svg
+                  >配音与背景音乐</span
+                ><span class="track-video"
+                  ><svg class="icon"><use href="#i-frame" /></svg
+                  >你的下一条作品.mp4</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="workflow-bottom">
+            <span>每个环节都能调整，创作始终握在你手里。</span
+            ><button class="next-step" id="next-step" type="button">
+              看看下一步<svg class="icon"><use href="#i-arrow" /></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="possibilities section-space page-width"
+        id="possibilities"
+        aria-labelledby="possibilities-title"
+      >
+        <div class="possibilities-intro">
+          <h2 id="possibilities-title">工具把流程接上。<br />你把表达留下。</h2>
+          <p>
+            知识分享、日常口播、产品介绍。<br />让更多想说的话，有机会成为作品。
+          </p>
+          <div class="format-tags">
+            <span>知识分享</span><span>自媒体口播</span><span>产品介绍</span>
+          </div>
+          <a class="text-link" href="https://github.com/Nagnip-xu/Szr3"
+            >看看它适不适合你的创作<svg class="icon">
+              <use href="#i-arrow-up" /></svg
+          ></a>
+        </div>
+        <div class="capability-list">
+          <article>
+            <svg class="icon"><use href="#i-text" /></svg>
+            <div>
+              <h3>灵感与文字，都有落脚点。</h3>
+              <p>
+                链接提取、文案改写、内容审查与标题生成，把前期想法整理成可以开口的内容。
+              </p>
+            </div>
+          </article>
+          <article>
+            <svg class="icon"><use href="#i-person" /></svg>
+            <div>
+              <h3>形象与声音，留下你的辨识度。</h3>
+              <p>
+                预设数字人与音色供你开始，也支持保存有授权的自定义形象和声音。
+              </p>
+            </div>
+          </article>
+          <article>
+            <svg class="icon"><use href="#i-frame" /></svg>
+            <div>
+              <h3>字幕与画面，配合你的表达。</h3>
+              <p>
+                字幕样式、BGM、画中画与成片预览，完成后导出
+                MP4，继续你的发布计划。
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="faq section-space page-width"
+        id="faq"
+        aria-labelledby="faq-title"
+      >
+        <div class="faq-heading">
+          <h2 id="faq-title">你可能<br />还想知道。</h2>
+          <p>
+            还有其他问题？<br /><a
+              href="https://github.com/Nagnip-xu/Szr3/issues"
+              >到 GitHub 交流<svg class="icon"><use href="#i-arrow-up" /></svg
+            ></a>
+          </p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              完全不会剪辑，也能开始吗？<svg class="icon">
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                可以从文案、配音、数字人、后期逐步开始。工作台将这些环节放在同一条流程中，你可以在成片前预览和调整内容。最终效果仍会受文案、参考素材与所选参数影响。
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              可以使用自己的形象和声音吗？<svg class="icon">
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                支持上传有授权的参考视频和音频，保存自定义数字人与音色。使用前需要完成相应的肖像、声音使用授权确认。
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              官网上的互动会实时生成数字人吗？<svg class="icon">
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                这里展示现有预设人物的参考片段，你可以切换人物、编辑文字并预览字幕样式。正式配音、口型驱动和视频生成，需要在星轨工作台中完成。
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              完成的视频如何导出和发布？<svg class="icon">
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                完成后可导出 MP4
+                文件，并自行上传到你使用的内容平台。当前产品尚未接入多平台自动发布功能。
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              在哪里了解项目与运行方式？<svg class="icon">
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                前往 GitHub
+                仓库，查看功能说明、环境要求和运行指南。遇到问题或有新想法，也可以通过
+                Issues 与我们交流。
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="experience section-space"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="page-width experience-grid">
+          <div class="experience-copy">
+            <span class="large-orbit" aria-hidden="true"
+              ><i></i><i></i><b></b
+            ></span>
+            <h2 id="experience-title">下一条，<br />让你来讲。</h2>
+            <p>带着一个想法来，<br />从你的第一句开场白开始。</p>
+          </div>
+          <div class="repository-entry">
+            <h3>下一步，在 GitHub 见。</h3>
+            <p>
+              看看星轨如何把文案、声音与画面连起来。<br />项目介绍、完整源码与运行指南，都在这里。
+            </p>
+            <a class="repository-name" href="https://github.com/Nagnip-xu/Szr3"
+              >Nagnip-xu <span>/</span> Szr3<svg class="icon">
+                <use href="#i-arrow-up" /></svg
+            ></a>
+            <a
+              class="button button-coral"
+              id="repository-cta"
+              href="https://github.com/Nagnip-xu/Szr3"
+              >前往 GitHub 仓库<svg class="icon"><use href="#i-arrow-up" /></svg
+            ></a>
+            <a
+              class="repository-issues"
+              href="https://github.com/Nagnip-xu/Szr3/issues"
+              >有问题或新想法？到 Issues 聊聊<svg class="icon">
+                <use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="page-width">
+        <div class="footer-top">
+          <a class="brand" href="#top"
+            ><img src="./assets/mark.svg" alt="" width="38" height="38" /><span
+              >星轨<span class="brand-light">数字人</span></span
+            ></a
+          >
+          <p>为每一次真诚表达。</p>
+          <a class="footer-email" href="https://github.com/Nagnip-xu/Szr3"
+            >GitHub · Nagnip-xu / Szr3<svg class="icon">
+              <use href="#i-arrow-up" /></svg
+          ></a>
+        </div>
+        <div class="footer-wordmark" aria-hidden="true">
+          XINGGUI<span>表达，继续。</span
+          ><svg viewBox="0 0 120 120">
+            <ellipse
+              cx="60"
+              cy="60"
+              rx="53"
+              ry="22"
+              transform="rotate(-38 60 60)"
+            />
+            <circle cx="60" cy="60" r="13" />
+            <circle class="orbit-dot" cx="96" cy="32" r="8" />
+          </svg>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 星轨数字人</span
+          ><span>从一句文案，到你的下一条视频。</span
+          ><a href="#top"
+            >回到顶部<svg class="icon"><use href="#i-arrow-up" /></svg
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <noscript
+      ><div class="noscript-note">
+        页面内容可正常浏览。人物切换和字幕演示需要启用
+        JavaScript；项目源码与运行指南可直接前往 GitHub 查看。
+      </div></noscript
+    >
+  </body>
+</html>

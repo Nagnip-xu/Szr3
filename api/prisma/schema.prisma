@@ -1,0 +1,117 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Organization {
+  id            String    @id @default(cuid())
+  name          String
+  plan          String    @default("enterprise")
+  quotaMinutes  Int       @default(500)
+  usedMinutes   Int       @default(0)
+  quotaStorage  Int       @default(10240)
+  retentionDays Int       @default(30)
+  duixLicenseAcknowledgedAt DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  users         User[]
+  projects      Project[]
+  consents      ConsentRecord[]
+  mediaAssets   MediaAsset[]
+}
+
+model User {
+  id             String       @id @default(cuid())
+  email          String       @unique
+  passwordHash   String
+  name           String
+  role           String       @default("admin")
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  projects       Project[]
+  registrationCode RegistrationCode?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Project {
+  id             String       @id @default(cuid())
+  name           String       @default("未命名项目")
+  status         String       @default("draft")
+  stateJson      String       @db.LongText
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  renderJobs     RenderJob[]
+  consents       ConsentRecord[]
+  mediaAssets    MediaAsset[]
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model RenderJob {
+  id             String   @id @default(cuid())
+  projectId      String
+  project        Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  organizationId String
+  userId         String
+  type           String
+  status         String   @default("pending")
+  progress       Int      @default(0)
+  error          String?
+  outputFile     String?
+  inputJson      String   @default("{}") @db.LongText
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model ConsentRecord {
+  id             String       @id @default(cuid())
+  organizationId String
+  projectId      String
+  userId         String
+  type           String
+  version        String
+  subjectName    String?
+  acceptedAt     DateTime     @default(now())
+  revokedAt      DateTime?
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  project        Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, projectId, type])
+}
+
+model MediaAsset {
+  id             String       @id @default(cuid())
+  organizationId String
+  projectId      String
+  filename       String
+  purpose        String
+  consentId      String?
+  expiresAt      DateTime?
+  deletedAt      DateTime?
+  createdAt      DateTime     @default(now())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  project        Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([expiresAt, deletedAt])
+  @@index([organizationId, projectId])
+}
+
+model RegistrationCode {
+  id        String   @id @default(cuid())
+  code      String   @unique
+  note      String?
+  expiresAt DateTime?
+  usedAt    DateTime?
+  usedById  String?  @unique
+  usedBy    User?    @relation(fields: [usedById], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now())
+
+  @@index([usedAt, expiresAt])
+}

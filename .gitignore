@@ -1,0 +1,54 @@
+tools/ffmpeg/
+node_modules/
+
+# Build outputs (regenerable)
+web/.next/
+web/.next-admin/
+api/dist/
+desktop-exe/build/
+desktop-exe/dist/win-unpacked/
+desktop-exe/dist/builder-debug.yml
+desktop-exe/dist/*.blockmap
+
+# Logs and temp deploy artifacts
+*.log
+szr3-deploy.zip
+media-inspection/
+
+# Local test media dropped at repo root
+DM_*.mp4
+DM_*.mp4.jpg
+
+# Secrets
+api/.env
+web/.env.local
+
+# Local credentials and machine state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.db-journal
+*.sqlite*
+.vs/
+__pycache__/
+.venv/
+*.tsbuildinfo*
+
+# Runtime data, installers and local design-review tooling
+api/storage/
+api/uploads/
+api/tmp-*
+api/.subtitle-check.jpg
+desktop-exe/dist/
+/.impeccable/
+/xinggui-official-website.zip
+coverage/
+*.log.*
+Thumbs.db
+.DS_Store
+/_site/

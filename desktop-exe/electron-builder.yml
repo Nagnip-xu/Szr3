@@ -1,0 +1,32 @@
+appId: com.xinggui.szr3
+productName: 星轨数字人
+copyright: Copyright © 2026 Szr3
+electronDist: node_modules/electron/dist
+directories:
+  output: dist
+  buildResources: assets
+files:
+  - src/**/*
+  - package.json
+extraResources:
+  - from: build/runtime
+    to: frontend
+    filter:
+      - "**/*"
+asar: true
+compression: maximum
+win:
+  signAndEditExecutable: false
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: Szr3-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: 星轨数字人
+  deleteAppDataOnUninstall: false
+publish: null
