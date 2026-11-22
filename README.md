@@ -260,6 +260,8 @@ Remove-Item Env:ADMIN_PASSWORD
 
 **官网地址：[https://nagnip-xu.github.io/Szr3/](https://nagnip-xu.github.io/Szr3/)**
 
+官网已通过 GitHub Actions 发布，并启用 HTTPS。更新官网后，工作流会自动同步到上述地址。
+
 发布工作流位于 [`.github/workflows/pages.yml`](.github/workflows/pages.yml)。推送到 `main` 且修改 `website/`、打包脚本或工作流时自动发布，也可以在 Actions 中手动运行。
 
 ```text
@@ -306,6 +308,7 @@ npm run dist
 | 桌面端：`npm test --prefix desktop-exe` | **4 项通过**：可信 HTTPS 转发与过期 / 不可信 / 域名不匹配证书拒绝                             |
 | 工作台：`npm run lint --prefix web`     | 通过                                                                                          |
 | 工作台：`npm run build --prefix web`    | 通过生产构建与 TypeScript 检查                                                                |
+| GitHub Pages                            | 构建与部署成功，公开首页 HTTP 200                                                             |
 | 官网打包：`npm run build:website`       | 通过；所有本地资源引用存在                                                                    |
 | 官网浏览器验证                          | 320 / 360 / 390 / 768 / 1024 / 1440px，字幕、人物、播放、流程、FAQ、GitHub 入口与减少动态效果 |
 | 官网可访问性扫描                        | 桌面与手机视口的 Axe WCAG A / AA / 2.1 AA 扫描无违规项；不替代完整人工审计                    |
